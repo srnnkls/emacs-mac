@@ -33104,11 +33104,8 @@ produce_special_glyphs (struct it *it, enum display_element_type what,
 		}
 	      else
 		{
-		  struct face *face = FACE_FROM_ID (it->f, face_id);
-		  int id = FACE_FOR_CHAR (it->f, face, c, -1, Qnil);
-
 		  /* Bidi mirroring.  */
-		  SET_GLYPH (glyph, c, id);
+		  SET_GLYPH (glyph, c, face_id);
 		}
 	    }
 	  else
@@ -33174,11 +33171,8 @@ produce_special_glyphs (struct it *it, enum display_element_type what,
 		}
 	      else
 		{
-		  struct face *face = FACE_FROM_ID (it->f, face_id);
-		  int id = FACE_FOR_CHAR (it->f, face, c, -1, Qnil);
-
 		  /* Bidi mirroring.  */
-		  SET_GLYPH (glyph, c, id);
+		  SET_GLYPH (glyph, c, face_id);
 		}
 	    }
 	  else
